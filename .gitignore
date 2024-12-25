@@ -1,0 +1,35 @@
+ # Ignore compiled Java class files
+*.class
+
+# Ignore log files
+*.log
+
+# Ignore IDE configurations (for example, IntelliJ IDEA or Eclipse)
+.idea/
+.vscode/
+*.iml
+*.project
+*.classpath
+
+# Ignore Maven and Gradle directories and files
+target/
+build/
+*.jar
+*.war
+*.ear
+
+# Ignore Java runtime files
+*.log
+*.tmp
+
+# Ignore OS-specific files
+.DS_Store          # macOS
+Thumbs.db          # Windows
+
+# Ignore Java dependency files (in case of some non-standard configurations)
+*.jars
+
+# Ignore any temporary or backup files
+*.bak
+*.swp
+*~
