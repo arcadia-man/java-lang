@@ -53,6 +53,35 @@ public class ArrayMethods {
     System.out.println("Copied array: " + Arrays.toString(copy));
   }
 
+  // Method to demonstrate stream an array
+  public void streamOfArray() {
+    int[] numbers = { 1, 2, 3, 4, 5 };
+
+    // 1. Sum of all elements
+    int sum = Arrays.stream(numbers).sum();
+    System.out.println("Sum: " + sum);
+
+    // 2. Find the maximum value
+    int max = Arrays.stream(numbers).max().orElse(Integer.MIN_VALUE);
+    System.out.println("Maximum: " + max);
+
+    // 3. Filter even numbers
+    int[] evenNumbers = Arrays.stream(numbers).filter(n -> n % 2 == 0).toArray();
+    System.out.println("Even numbers: " + Arrays.toString(evenNumbers));
+
+    // 4. Square each number
+    int[] squaredNumbers = Arrays.stream(numbers).map(n -> n * n).toArray();
+    System.out.println("Squared numbers: " + Arrays.toString(squaredNumbers)); // Output: [1, 4, 9, 16, 25]
+
+    // 5. Check if all numbers are positive
+    boolean allPositive = Arrays.stream(numbers).allMatch(n -> n > 0);
+    System.out.println("All numbers are positive: " + allPositive); // Output: true
+
+    // 6. Check if any number is greater than 10
+    boolean anyGreaterThan10 = Arrays.stream(numbers).anyMatch(n -> n > 10);
+    System.out.println("Any number greater than 10: " + anyGreaterThan10); // Output: false
+  }
+
   public static void main(String[] args) {
     ArrayMethods am = new ArrayMethods();
     am.sortingFun();
@@ -60,5 +89,6 @@ public class ArrayMethods {
     am.copyArray();
     am.fillArray();
     am.compareArrays();
+    am.streamOfArray();
   }
 }
