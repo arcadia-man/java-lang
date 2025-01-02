@@ -8,6 +8,7 @@ public class ArrayExample {
     example.oneDimensionalArrays();
     example.twoDimensionalArrays();
     example.arrayProperties();
+    example.changeValueByReference();
   }
 
   public void oneDimensionalArrays() {
@@ -80,4 +81,26 @@ public class ArrayExample {
     }
     System.out.println();
   }
+
+  public void changeValue(int x) {
+    x = 95;
+  }
+
+  public void changeValue(int[] arr) {
+    arr[0] = 95;
+  }
+
+  void changeValueByReference() {
+    int x = 90;
+    changeValue(x);
+    System.out.println(x);
+    int[] arr = { 9, 95 };
+    
+    // arrayes are passed as reference so value will be changed
+    changeValue(arr);
+    for (int i : arr) {
+      System.out.println(i);
+    }
+  }
+
 }
