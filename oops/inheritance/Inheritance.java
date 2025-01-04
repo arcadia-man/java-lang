@@ -36,6 +36,10 @@ public class Inheritance {
     obj.combinedMethod();
 
   }
+  
+  public void inheritance(){
+    main(null);
+  }
 
   public static void main(String[] args) {
     Inheritance ih = new Inheritance();
