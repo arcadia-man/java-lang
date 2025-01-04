@@ -5,6 +5,8 @@ public class Person {
   int age;
 
   // Constructor
+  // declearing the constructor is private so it can't be intenciated
+
   public Person(String name, int age) {
     this.name = name;
     this.age = age;
